@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@env/*": ["apps/client/src/environments/*"],
+      "@nxworkshp/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@nxworkshp/core-data": ["libs/core-data/src/index.ts"],
+      "@nxworkshp/core-state": ["libs/core-state/src/index.ts"],
+      "@nxworkshp/widgets": ["libs/core-state/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
