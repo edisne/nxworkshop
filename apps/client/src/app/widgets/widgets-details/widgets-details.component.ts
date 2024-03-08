@@ -2,9 +2,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { Widget } from '@nxworkshp/api-interfaces';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'nxworkshp-widgets-details',
@@ -15,6 +17,8 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatListModule,
     MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   templateUrl: './widgets-details.component.html',
   styleUrl: './widgets-details.component.css',

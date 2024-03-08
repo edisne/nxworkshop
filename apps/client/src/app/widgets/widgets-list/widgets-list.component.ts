@@ -4,11 +4,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { Widget } from '@nxworkshp/api-interfaces';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'nxworkshp-widgets-list',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatListModule, MatIconModule],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule,
+  ],
   templateUrl: './widgets-list.component.html',
   styleUrl: './widgets-list.component.css',
 })

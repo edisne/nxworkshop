@@ -17,6 +17,11 @@ import { Observable } from 'rxjs';
 export class WidgetsComponent implements OnInit {
   allWidgets$: Observable<Widget[]> = this.widgetsFacade.allWidgets$;
   selectedWidget$: Observable<Widget> = this.widgetsFacade.selectedWidget$;
+  // selectedWidget$: Observable<Widget> = new Observable<{
+  //   id: '';
+  //   title: '';
+  //   description: '';
+  // }>();
 
   constructor(private widgetsFacade: WidgetsFacade) {}
 

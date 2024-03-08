@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { createEffect, Actions, ofType, act } from '@ngrx/effects';
+import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { switchMap, catchError, of, map } from 'rxjs';
 import * as WidgetsActions from './widgets.actions';
 import { WidgetsService } from '@nxworkshp/core-data';
@@ -26,9 +26,10 @@ export class WidgetsEffects {
       ofType(WidgetsActions.loadWidgets),
       switchMap(() =>
         this.widgetService.all().pipe(
-          map((widgets: Widget[]) =>
-            WidgetsActions.loadWidgetsSuccess({ widgets })
-          ),
+          map((widgets: Widget[]) => {
+            console.log('Widgets', widgets);
+            return WidgetsActions.loadWidgetsSuccess({ widgets });
+          }),
           catchError((error) =>
             of(WidgetsActions.loadWidgetsFailure({ error }))
           )

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '@env/environment';
 import { Widget } from '@nxworkshp/api-interfaces';
 
 @Injectable({
@@ -8,6 +7,7 @@ import { Widget } from '@nxworkshp/api-interfaces';
 })
 export class WidgetsService {
   model = 'widgets';
+  apiEndpoint = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) {}
 
@@ -32,7 +32,7 @@ export class WidgetsService {
   }
 
   private getUrl() {
-    return `${environment.apiEndpoint}${this.model}`;
+    return `${this.apiEndpoint}${this.model}`;
   }
 
   private getUrlWithId(id: string) {
