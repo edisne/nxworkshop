@@ -5,11 +5,17 @@ import { WidgetsDetailsComponent } from 'apps/client/src/app/widgets/widgets-det
 import { WidgetsFacade } from '@nxworkshp/core-state';
 import { Widget } from '@nxworkshp/api-interfaces';
 import { Observable } from 'rxjs';
+import { MaterialModule } from '@nxworkshp/material';
 
 @Component({
   selector: 'nxworkshp-widgets',
   standalone: true,
-  imports: [CommonModule, WidgetsListComponent, WidgetsDetailsComponent],
+  imports: [
+    CommonModule,
+    WidgetsListComponent,
+    WidgetsDetailsComponent,
+    MaterialModule,
+  ],
   providers: [WidgetsFacade],
   templateUrl: './widgets.component.html',
   styleUrl: './widgets.component.css',

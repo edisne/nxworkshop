@@ -1,0 +1,19 @@
+{
+  "name": "material",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/material/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/material",
+        "main": "libs/material/src/index.ts",
+        "tsConfig": "libs/material/tsconfig.lib.json",
+        "assets": ["libs/material/*.md"]
+      }
+    }
+  },
+  "tags": []
+}
